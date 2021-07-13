@@ -1,0 +1,1 @@
+web: gunicorn simpleLibrary.wsgi --log-file -
