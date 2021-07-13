@@ -1,0 +1,26 @@
+{% extends "catalog/base.html" %}
+{% block content %}
+
+  <div class="content text-center">
+
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">Title</th>
+          <th scope="col">Author</th>
+          <th scope="col">Publish Date</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for book in book_list %}
+          <tr>
+            <th scope="row"> <h4><a href="{% url 'book_detail' pk=book.pk %}"> {{ book.title }}</a></h4></th>
+            <td><h4>{{ book.author }}</h4></td>
+            <td><h4>{{ book.publish_date }}</h4></td>
+          </tr>
+        {% endfor %}
+      </tbody>
+      </table>
+  </div>
+
+{% endblock content %}

@@ -1,0 +1,15 @@
+{% extends "catalog/base.html" %}
+{% block content %}
+  <h1 class="text-center">Add A New Book Here!</h1>
+    <div class="container center">
+    {% load crispy_forms_tags %}
+
+      <form class="uniForm" method="post">
+        {% csrf_token %}
+        {{form|crispy}}
+        <div class="container center" >
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </div>
+      </form>
+    </div>
+{% endblock  %}
