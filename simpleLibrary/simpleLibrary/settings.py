@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-s!ugy@s=+aqdlp7nv3g2cyjn6y#zv42(m$ixk55zq+s@ck=*w&
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = [*]
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -80,8 +80,8 @@ WSGI_APPLICATION = 'simpleLibrary.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'ciba',
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
 
