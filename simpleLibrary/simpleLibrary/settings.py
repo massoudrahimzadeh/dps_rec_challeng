@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-s!ugy@s=+aqdlp7nv3g2cyjn6y#zv42(m$ixk55zq+s@ck=*w&
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['127.0.0.1', 'https://book-catalog-dps-rahimzadeh.herokuapp.com/']
 
 
 # Application definition
@@ -131,5 +131,8 @@ STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
+
+MEDIA_ROOT = os.path.join(PROJECT_ROOT, 'media')
+MEDIA_URL = '/media/'
 
 django_heroku.settings(locals())
