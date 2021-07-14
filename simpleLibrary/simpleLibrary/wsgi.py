@@ -1,5 +1,5 @@
 """
-WSGI config for simpleLibrary project.
+WSGI config for simple_library project.
 
 It exposes the WSGI callable as a module-level variable named ``application``.
 
@@ -10,8 +10,7 @@ https://docs.djangoproject.com/en/3.2/howto/deployment/wsgi/
 import os
 
 from django.core.wsgi import get_wsgi_application
-from whitenoise.django import DjangoWhiteNoise
 
-os.environ.setdefault("DJANGO_SETTINGS_MODULE", "bootcamp.settings")
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'simple_library.settings')
 
-application = DjangoWhiteNoise(get_wsgi_application())
+application = get_wsgi_application()
